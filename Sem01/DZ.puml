@@ -1,0 +1,49 @@
+@startuml
+class BottleOfWater {
++ String displayInfo()
+}
+class Chocolate {
+~ int weight
+- int checkWeight(int)
++ int getWeight()
++ String displayInfo()
+}
+class Product {
+# String name
+# String brand
+# double price
++ double getPrice()
++ void setPrice(double)
+- void checkPrice(double)
++ String displayInfo()
+}
+abstract class Bottle {
+# double volume
++ double getVolume()
++ void setVolume(double)
++ String displayInfo()
+}
+class BottleOfMilk {
+- double volume
+- int fatСontent
++ double getVolume()
++ void setVolume(int)
++ int getFatСontent()
++ void setFatСontent(int)
++ String displayInfo()
+}
+class Program {
++ {static} void main(String[])
+}
+class VendingMachine {
+- List<Product> products
++ Product getBottleOfWater(double)
++ Product getChocolate(int)
+}
+
+
+Bottle <|-- BottleOfWater
+Product <|-- Chocolate
+Product <|-- Bottle
+Bottle <|-- BottleOfMilk
+@enduml
