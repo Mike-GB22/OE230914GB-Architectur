@@ -1,0 +1,59 @@
+@startuml
+' Определение классов и интерфейсов
+abstract class Animal {
+~ String type
+~ String subtype
+~ String name
+~ int age
++ String toString()
+}
+
+Animal <|-- Mammal
+abstract class Mammal {
+}
+
+Animal <|-- Birds
+abstract class Birds {
+~ void go()
+~ void eat()    
+~ void voice()    
+}
+
+Caneat <|.. Animal
+interface Caneat {
+~ void eat()
+}
+
+Canvoice <|.. Animal
+interface Canvoice {
+~ void voice()
+}
+
+Cango <|.. Animal
+interface Cango {
+~ void go()
+}
+
+class MainProgram {
++ {static} void main(String[])
+}
+
+
+Mammal <|-- Cat
+abstract class Cat {
+~ void go()
+~ void eat()    
+~ void voice()
+}
+
+Mammal <|-- Dog
+abstract class Dog {
+~ void go()
+~ void eat()    
+~ void voice()
+}
+
+Birds <|-- Popug
+abstract class Popug {
+}
+@enduml

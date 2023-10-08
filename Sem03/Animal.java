@@ -1,10 +1,10 @@
 package Sem03;
 
 abstract public class Animal implements caneat, canvoice, cango{
-    public String type;
-    public String subtype;
-    public String name;
-    public int age;
+    String type;
+    String subtype;
+    String name;
+    int age;
 
     public Animal(String type, String subtype, String name, int age){
         this.type = type;
